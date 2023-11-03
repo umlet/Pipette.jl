@@ -36,9 +36,9 @@ Alternatively, press `[Ctrl+➔]` to insert the string `" |> "` anywhere on a li
   julia> Pipette.set_doubletap_delay(from=100, to=300)
   ```
 
-- To tune this range, use `Pipette.tune_doubletap_delay()`.
+- To tune this, find out your tapping speed and keyboard repeat delay with `Pipette.tune_doubletap_delay()`.
 
-- To turn this on or off, use `Pipette.on()` or `Pipette.off()`.
+- To turn Pipette on or off, use `Pipette.on()` or `Pipette.off()`. To keep the `[Ctrl+➔]`-behavior, and just turn off the double-tap one, set the range to zeros.
 
 <br>
 <br>
