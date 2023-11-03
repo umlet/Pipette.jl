@@ -2,7 +2,7 @@
 
 If you love the Julia REPL and the pipe operator,
 
-if you have a problem with typing the prickly `" |> "` sequence [^1],
+if you have a problem with typing the prickly `" |> "` sequence[^1],
 
 and if no one else can help,
 
@@ -83,7 +83,7 @@ end
 
 
 
-### Footnotes
+#### Footnotes
 [^1] On a German keyboard, e.g., you need to type `[Space]` `[AltGr + "|"]` `[Shift + ">"]` `[Space]`.
 
 
