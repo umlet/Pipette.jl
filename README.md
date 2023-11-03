@@ -27,7 +27,9 @@ Alternatively, press `[Ctrl+➔]` to insert the string `" |> "` anywhere on a li
 
 ### Usage
 
-- The double-tap must be "faster" than 300 milli-seconds. It also must be "slower" than 100 milli-seconds -- this avoids pipes galore when you keep pressing the cursor to reach the end of a line.
+- The delay between taps of [➔] must be <300 milli-seconds to register as double-tap.
+
+  It also must be >100 milli-seconds -- this avoids pipes galore when you keep pressing the cursor to reach the end of a line.
 
   You can configure this with
   ```julia
@@ -84,7 +86,7 @@ end
 
 
 #### Footnotes
-[^1] On a German keyboard, e.g., you need to type `[Space]` `[AltGr + "|"]` `[Shift + ">"]` `[Space]`.
+[^1]: On a German keyboard, e.g., you need to type `[Space]` `[AltGr+"|"]` `[Shift+">"]` `[Space]`.
 
 
 
