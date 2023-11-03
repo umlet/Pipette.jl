@@ -26,22 +26,21 @@ on() = ( _CONF.on = true; nothing )
 off() = ( _CONF.on = false; nothing )
 
 
-mutable struct _State  t_last_ms::UInt64  end
+mutable struct _State  t_last_ms::Int64  end
 const _STATE = _State(0)
 
 
 
 
-time_ms()::UInt64 = div(time_ns(), UInt64(1_000_000))
+time_ms()::Int64 = Int64(div(time_ns(), UInt64(1_000_000)))
 function attemptpiper()::Bool
     !_CONF.on  &&  return false
 
-    t0::UInt64 = _STATE.t_last_ms
-    t1::UInt64 = time_ms()
-    t0 > t1  &&  return false
+    t0 = _STATE.t_last_ms
+    t1 = time_ms()
+    t1 < t0  &&  return false  # can happen every 5.8 years ha ha
 
-    dt = Int64(t1 - t0)
-    if _CONF.doubletap_from_ms < dt < _CONF.doubletap_to_ms
+    if _CONF.doubletap_from_ms < (t1 - t0) < _CONF.doubletap_to_ms
         # set last occurrence to never, to avoid retrigger at next press
         _STATE.t_last_ms = 0
         return true

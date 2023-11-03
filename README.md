@@ -27,7 +27,7 @@ Alternatively, press `[Ctrl+➔]` to insert the string `" |> "` anywhere on a li
 
 ### Usage
 
-- The delay between taps of [➔] must be <300 milli-seconds to register as double-tap.
+- The delay between [➔]-taps must be <300 milli-seconds to register as double-tap.
 
   It also must be >100 milli-seconds -- this avoids pipes galore when you keep pressing the cursor to reach the end of a line.
 
