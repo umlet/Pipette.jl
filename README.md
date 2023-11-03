@@ -9,11 +9,11 @@ and if no one else can help,
 maybe **you** can hire Pipette and insert `" |> "` with double-tapping arrow-right [➔] at the end of the line:
 
 ```julia
-julia> get_transmogrifying_iterator()#..double tap [➔]..
+julia> get_transmogrifying_iterator()#..now just double tap [➔]..
 ```
 Voilà:
 ```julia
-julia> get_transmogrifying_iterator() |> #..ta ta-da TAAAA!
+julia> get_transmogrifying_iterator() |> #<- ta ta-da TAAAA!
 ```
 
 <br>
