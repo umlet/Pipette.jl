@@ -1,0 +1,46 @@
+
+
+function __init__()
+    ___DEBUG  &&  @info "pipette: in __init__"
+
+    ### OhHisREPL start -- copied from OhMyREPL
+    options = Base.JLOptions()
+    # command-line
+    if (options.isinteractive != 1) && options.commands != C_NULL
+        ___DEBUG  &&  @info "pipette: will do nothing; not interactive enough"
+        return
+    end
+
+    if isdefined(Base, :active_repl)
+        ___DEBUG  &&  @info "pipette: active_repl already defined"
+        if !isdefined(Base.active_repl, :interface)
+            ___DEBUG  &&  @info "pipette: interface not yet defined; creating.."
+            Base.active_repl.interface = REPL.setup_interface(Base.active_repl)
+        else
+            ___DEBUG  &&  @info "pipette: interface also already defined"
+        end
+        ___DEBUG  &&  @info "immediately CALLING pipette's insert function"
+        #= Prompt.insert_keybindings() =#  _init()
+        # @async begin
+        #     sleep(0.25)
+        #     reinsert_after_pkg()
+        # end
+    else
+        ___DEBUG  &&  @info "pipette: avtive_repl not defined; only REGISTERING pipette's insert function for later call"
+        atreplinit() do repl
+            if !isdefined(repl, :interface)
+                repl.interface = REPL.setup_interface(repl)
+            end
+            #= Prompt.insert_keybindings() =#  _init()
+            # @async begin
+            #     sleep(0.25)
+            #     reinsert_after_pkg()
+            # end
+            # update_interface(repl.interface)  # seems to deal with prompts only..
+        end
+    end
+    ### OhHisREPL end
+
+    nothing
+end
+
