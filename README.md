@@ -2,11 +2,11 @@
 
 If you love the Julia REPL and the pipe operator,
 
-if you have a problem with typing `[Space][AltGr or Shift+"|"][Shift+">"][Space]`,
+if you have a problem with typing the prickly `" |> "` sequence [^1],
 
 and if no one else can help,
 
-maybe **you** can hire Pipette and double-tap arrow-right [➔] at the end of the line:
+maybe **you** can hire Pipette and insert `" |> "` with double-tapping arrow-right [➔] at the end of the line:
 
 ```julia
 julia> gettransmogrifyingiterator()#..double tap [➔]..
@@ -18,7 +18,7 @@ julia> gettransmogrifyingiterator() |> #..ta ta-da TAAAA!
 
 <br>
 
-Alternatively, or when you are in the middle of the line, press `[Ctrl+➔]` to insert the string `" |> "`.
+Alternatively, press `[Ctrl+➔]` to insert the string `" |> "` anywhere on a line.
 
 <br>
 <br>
@@ -78,7 +78,13 @@ end
 #### Version History
 - 0.1 Initial version
 
+<br>
+<br>
 
+
+
+### Footnotes
+[^1] On a German keyboard, e.g., you need to type `[Space]` `[AltGr + "|"]` `[Shift + ">"]` `[Space]`.
 
 
 
