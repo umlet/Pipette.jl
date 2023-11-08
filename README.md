@@ -47,7 +47,7 @@ Alternatively, press `[Ctrl+➔]` to insert the string `" |> "` anywhere on a li
 
 ### Install
 
-Just `]add https://github.com/umlet/Pipette.jl.git` (or `]add Pipette` once registered), and keep `using Pipette`.
+Just `]add Pipette` and keep `using Pipette`.
 
 To turn it on by default, you can modify `.julia/config/startup.jl`:
 
